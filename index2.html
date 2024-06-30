@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>java script</title>
+</head>
+<style>
+    body{
+        background-image: url(https://tse2.mm.bing.net/th?id=OIP.nmWw8tJeUPK4bcrWLfa3YAHaEK&pid=Api&P=0&h=180);
+        background-size: cover;
+    }
+    .comparator{
+       text-align: center;
+       margin-top: 5%;
+    }
+    .text-container{
+        display: flex;
+        justify-content: space-around;
+        margin-top: 5%;
+    }
+    .input-text{
+        height: 200px;
+        width: 400px;
+        border-radius: 5px;
+        font-size: 30px;
+       
+    }
+    .output{
+        text-align: center;
+       margin-top: 5%;
+       font-size: 50px;
+    }
+    
+
+</style>
+<body>
+    <div class="string">
+    <h1 class="comparator">STRING COMPARATOR</h1>
+    <div class="text-container">
+        <input type="text" class="input-text" id="input1" onkeyup="comparetext ()">
+        <input type="text" class="input-text" id="input2" onkeyup="comparetext ()">
+    </div>
+    <p class="output" id="input-result"></p>
+</div>
+<script>
+       function comparetext ()
+       {
+        const num1Element = document.getElementById("input1")
+        const num2Element = document.getElementById("input2")
+        const resultElement = document.getElementById("input-result")
+
+        if(num1Element.value == num2Element.value){
+            resultElement.innerText = "matched" 
+            resultElement.style.color = "green"
+        }
+        else{
+            resultElement.innerText = " not matched"
+            resultElement.style.color= " red"
+        }
+       }
+</script>
+</body>
+</html>
