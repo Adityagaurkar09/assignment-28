@@ -24,6 +24,7 @@
         border-radius: 10px;
         margin: 20px;
         border: 3px solid black;
+        font-size: 30px;
     }
     .text-result{
         font-size: 50px;
@@ -35,9 +36,11 @@
         border-radius: 5px;
     }
     .reset{
+        font-size: 20px;
         height: 50px;
         width: 130px;
-        border-radius: 5px;
+        border-radius: 20px;
+        border: 5px solid  rgb(54, 119, 107);
     }
 
 </style>
@@ -45,13 +48,13 @@
     <div class="two-number-sum" >
     <h1 class="heading">SUM OF TWO NUMBER </h1>
 
-    <input  type="number" class="input-number" id="input-num1">
-    <input  type="number" class="input-number" id="input-num2">
+    <input  type="number" class="input-number" id="input-num1" onkeyup="calsum()">
+    <input  type="number" class="input-number" id="input-num2" onkeyup="calsum()">
 
     <p class="text-result" id="text-result"></p>
 
-<button type="button" class="calculate" onclick="calsum()">calculate</button>
-<button type="button" class="reset">reset</button>
+
+<button type="button" class="reset" onclick="result()">RESET</button>
 
 </div>
 
@@ -61,10 +64,23 @@
   const num1Element = document.getElementById("input-num1")
   const num2Element = document.getElementById("input-num2")
 
-  const sum = parseInt(num1Element.value) + parseInt(num2Element.value)
+  const sum = parseInt(num1Element.value || 0)   + parseInt(num2Element.value || 0)
   
   const resultElement = document.getElementById("text-result")
   resultElement.innerText = `sum: ${sum}`
+    }
+
+    function result()
+    {
+  const num1Element = document.getElementById("input-num1")
+  num1Element.value = ""
+
+  const num2Element = document.getElementById("input-num2") 
+  num2Element.value = ""
+
+  const resultElement = document.getElementById("text-result")
+  resultElement.innerText = ""
+
     }
 
 
