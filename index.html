@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>java script</title>
+</head>
+<style>
+   body{
+    background-image: url(https://tse1.mm.bing.net/th?id=OIP.oH9Foju7m8ynzAEAZbm6_QHaEo&pid=Api&P=0&h=180);
+    background-size: cover;
+   }
+    .heading{
+        margin-bottom: 60px;
+    }
+    .two-number-sum{
+        text-align: center;
+        margin-top: 14%;
+        
+    }
+    .input-number{
+        width: 150px;
+        height: 50px;
+        border-radius: 10px;
+        margin: 20px;
+        border: 3px solid black;
+    }
+    .text-result{
+        font-size: 50px;
+    }
+    .calculate{
+        margin-right: 20px;
+        height: 50px;
+        width: 130px;
+        border-radius: 5px;
+    }
+    .reset{
+        height: 50px;
+        width: 130px;
+        border-radius: 5px;
+    }
+
+</style>
+<body>
+    <div class="two-number-sum" >
+    <h1 class="heading">SUM OF TWO NUMBER </h1>
+
+    <input  type="number" class="input-number" id="input-num1">
+    <input  type="number" class="input-number" id="input-num2">
+
+    <p class="text-result" id="text-result"></p>
+
+<button type="button" class="calculate" onclick="calsum()">calculate</button>
+<button type="button" class="reset">reset</button>
+
+</div>
+
+<script>
+    function calsum()
+    {
+  const num1Element = document.getElementById("input-num1")
+  const num2Element = document.getElementById("input-num2")
+
+  const sum = parseInt(num1Element.value) + parseInt(num2Element.value)
+  
+  const resultElement = document.getElementById("text-result")
+  resultElement.innerText = `sum: ${sum}`
+    }
+
+
+</script>
+</body>
+</html>
